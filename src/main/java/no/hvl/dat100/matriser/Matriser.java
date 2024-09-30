@@ -4,12 +4,12 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
-
+		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
-
+		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
 	}
 
 	// c)
@@ -28,7 +28,7 @@ public class Matriser {
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
-
+		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
 	}
 	
 	// e)
