@@ -110,7 +110,7 @@ class MatriserEnhetsTests {
 		
 		assertTrue(Matriser.erLik(a, a));
 		assertTrue(Matriser.erLik(c, c));
-		assertFalse(Matriser.erLik(a, b));
+ 		assertFalse(Matriser.erLik(a, b));
 		assertFalse(Matriser.erLik(a, c));
 		assertFalse(Matriser.erLik(c, a));
 	}
