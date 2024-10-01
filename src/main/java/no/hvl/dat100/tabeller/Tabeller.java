@@ -4,7 +4,9 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		for (int i = 0; i < tabell.length; i++) {
+			System.out.println(tabell[i]);
+		}
 	}
 
 	// b)
@@ -29,7 +31,14 @@ public class Tabeller {
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		boolean funnet = false;
+		for (int i = 0; i < tabell.length; i++) {
+			if (tabell[i] == tall) {
+				funnet = true;
+				break;
+			}
+		}
+		return funnet;
 	}
 
 	// e)
@@ -44,7 +53,15 @@ public class Tabeller {
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		boolean sortert = true;
+		int i = 1;
+		while (sortert && i < tabell.length) {
+			if (tabell[i - 1] <= tabell[i])
+				i++;
+			else
+				sortert = false;
+		}
+		return sortert;
 	}
 
 	// h)
