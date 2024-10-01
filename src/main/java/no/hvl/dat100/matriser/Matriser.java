@@ -2,11 +2,8 @@ package no.hvl.dat100.matriser;
 
 public class Matriser {
 	
-	public static void main(String[]args) {
-		int[][] matrise = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-		
-		skrivUt(matrise);	
-	}
+
+	
 
 	// a)
 	// Implementer en metode som kan skrive ut en matrise.
@@ -19,13 +16,7 @@ public class Matriser {
 				
 			}
 			System.out.println();
-		}
-	
-	
-		
-		
-		
-		
+		}		
 	}
 
 	// b)
@@ -61,6 +52,19 @@ public class Matriser {
 	// Implementer en metode som avgjør om to matriser gitt ved parametrene a og b
 	// er like.
 	public static boolean erLik(int[][] mat1, int[][] mat2) {
+		
+		for (int[] i : mat1) {
+			for (int j : i) {
+				if (mat1[j] == mat2[j]) {
+					return true;
+				}
+				return false;
+			}
+		}
+		
+		
+		
+		
 		// TODO
 		throw new UnsupportedOperationException("Metoden ikke implementert");
 	}
