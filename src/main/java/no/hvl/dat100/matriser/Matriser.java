@@ -10,13 +10,7 @@ public class Matriser {
 	// a)
 	// Implementer en metode som kan skrive ut en matrise.
 	public static void skrivUt(int[][] matrise) {
-		String svar = "";
-		for (int i = 0; i < matrise.length; i++) {
-			for (int j = 0; j < matrise.length; j++)
-				svar += matrise[i][j] + " ";
-			svar += "\n";
-		}
-		System.out.println(svar);
+		
 	}
 
 	// b)
@@ -38,39 +32,14 @@ public class Matriser {
 	// (fler-dimensjonell tabell) som er like stor som parameteren og så
 	// multiplisere alle elementer med tall.
 	public static int[][] skaler(int tall, int[][] matrise) {
-		int m = matrise.length;
-		int n = matrise[0].length;
-		int[][] nymatrise = new int[m][n];
-		for (int i = 0; i < m; i++) {
-			for (int j = 0; j < n; j++) {
-				nymatrise[i][j] = tall * matrise[i][j];
-			}
-		}
-		return nymatrise;
+		
 	}
 
 	// d)
 	// Implementer en metode som avgjør om to matriser gitt ved parametrene a og b
 	// er like.
 	public static boolean erLik(int[][] mat1, int[][] mat2) {
-		boolean lik = true;
-		int rad1 = mat1.length;
-		int kol1 = mat1[0].length;
-		int rad2 = mat2.length;
-		int kol2 = mat2[0].length;
-		if (rad1 != rad2 || kol1 != kol2) {
-			lik = false;
-		} else {
-			for (int i = 0; i < rad1; i++) {
-				for (int j = 0; j < kol1; j++) {
-					if (mat1[i][j] != mat2[i][j]) {
-						lik = false;
-						break;
-					}
-				}
-			}
-		}
-		return lik;
+		
 	}
 
 	// e)
