@@ -1,30 +1,13 @@
 package no.hvl.dat100.tabeller;
 
-import static java.lang.Integer.parseInt;
-import static java.lang.Double.parseDouble;
-import static javax.swing.JOptionPane.showInputDialog;
-
-import java.util.Scanner;
-
-
 public class Tabeller {
-	
-	public static void main(String[] args) {
-		int[] tabell = {1, 3, 5, 8, 9, 11, 13, 14, 15};
-		
-		summer(tabell);
-		reverser(tabell);
-		
-	}
 
-	// a)
 	public static void skrivUt(int[] tabell) {
 		for (int i = 0; i < tabell.length; i++) {
-			System.out.println(tabell[i]);
+			System.out.print(tabell[i] + " ");
 		}
 	}
 
-	// b)
 	public static String tilStreng(int[] tabell) {
 
 		String streng = "[";
@@ -35,11 +18,9 @@ public class Tabeller {
 			}
 		}
 		streng += "]";
-		System.out.println(streng);
 		return streng;
 	}
 
-	// c)
 	public static int summer(int[] tabell) {
 		
 		int i = 0;
@@ -49,13 +30,10 @@ public class Tabeller {
 			
 			sum += tabell[i];
 			}
-		
-		System.out.println(sum);
 		return sum;
 
 	}
 
-	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 		boolean funnet = false;
 		for (int i = 0; i < tabell.length; i++) {
@@ -67,7 +45,6 @@ public class Tabeller {
 		return funnet;
 	}
 
-	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
 		for (int i = 0; i < tabell.length; i++) {
 			if (tabell[i] == tall) {
@@ -77,7 +54,6 @@ public class Tabeller {
 		return -1;
 	}
 
-	// f)
 	public static int[] reverser(int[] tabell) {
 
 	int[] tabell2 = new int[tabell.length];
@@ -103,8 +79,6 @@ public class Tabeller {
 		}
 		return sortert;
 	}
-
-	// h)
 
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
 		int[] sattSammen = new int[tabell1.length + tabell2.length];

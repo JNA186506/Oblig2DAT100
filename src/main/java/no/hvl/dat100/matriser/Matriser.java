@@ -1,12 +1,6 @@
 package no.hvl.dat100.matriser;
 
 public class Matriser {
-	
-
-	
-
-	// a)
-	// Implementer en metode som kan skrive ut en matrise.
 	public static void skrivUt(int[][] matrise) {
 			
 		for (int[] i : matrise) {
@@ -19,8 +13,6 @@ public class Matriser {
 		}		
 	}
 
-	// b)
-	// Implementer en metode som returnerer en streng-representation av en matrise.
 	public static String tilStreng(int[][] matrise) {
 		String str = "";
 		for (int i = 0; i < matrise.length; i++) {
@@ -32,11 +24,6 @@ public class Matriser {
 		return str;
 	}
 
-	// c)
-	// Implementer en metode som returnerer en ny matrise der alle tall i matrisen
-	// er multiplisert med parameteren tall. Metoden må først opprette en ny matrise
-	// (fler-dimensjonell tabell) som er like stor som parameteren og så
-	// multiplisere alle elementer med tall.
 	public static int[][] skaler(int tall, int[][] matrise) {
 		int [][] skaler = new int[matrise.length][];
 		for (int i = 0; i < matrise.length; i++) {
@@ -48,28 +35,21 @@ public class Matriser {
 		return skaler;
 	}
 
-	// d)
-	// Implementer en metode som avgjør om to matriser gitt ved parametrene a og b
-	// er like.
 	public static boolean erLik(int[][] mat1, int[][] mat2) {
-		
-		for (int[] i : mat1) {
-			for (int j : i) {
-				if (mat1[j] == mat2[j]) {
-					return true;
+		if (mat1.length != mat2.length) {
+			return false;
+		}
+
+		for (int i = 0; i < mat1.length; i++) {
+			for (int j = 0; j <	mat1[i].length; j++) {
+				if (mat1[i][j] != mat2[i][j]) {
+					return false;
 				}
-				return false;
 			}
 		}
-		
-		
-		
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden ikke implementert");
+		return true;
 	}
 
-	// e)
 	public static int[][] speile(int[][] matrise) {
 		int[][] speile = new int[matrise.length][];
 
@@ -83,7 +63,6 @@ public class Matriser {
 
 	}
 
-	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
 		int[][] multipliser = new int[a.length][];
 		// i = rader
